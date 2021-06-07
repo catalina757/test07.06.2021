@@ -11,6 +11,10 @@ a {
     color: #333333;
 }
 
+p {
+    margin: 0;
+}
+
 .f-s-18 {
     font-size: 1.12rem;
 }
@@ -68,7 +72,8 @@ f-s-22 {
 }
 
 .delimiter {
-    border-bottom: 1px solid rgba(51, 51, 51, .20);
+    border-bottom: 1px #d6d6d6 solid;
+    margin-bottom: 15px;
 }
 
 .search-menu {
@@ -92,7 +97,7 @@ f-s-22 {
 .cat-menu a {
     font-weight: 700;
     margin: 10px;
-    padding: 5px;
+    padding: 5px 10px 5px 10px;
     background-color: rgba(186, 186, 186, .1);
     border-radius: 10px;
 }
@@ -102,8 +107,12 @@ a.cat-menu-active, .cat-menu a:hover {
     color: #008EFF;
 }
 
+.card {
+    min-height: 105px;
+}
 
 .card-image img {
+    margin-left: 6px;
     width: 78px;
     height: 78px;
     border-radius: 10px;
@@ -148,6 +157,8 @@ a.cat-menu-active, .cat-menu a:hover {
     height: 100vh;
     position: fixed;
     top: 80px;
+    overflow: auto;
+    padding-bottom: 100px;
     right: 0;
     margin-left: -400px;
     background: rgba(255, 255, 255);
@@ -175,5 +186,22 @@ a.cat-menu-active, .cat-menu a:hover {
 }
 
 .checkout-button:hover {
-    color: #BABABA;
+    color: #fff;
 }
+
+.card-text {
+    min-height: 65px;
+}
+
+.horizontal-menu {
+    background: #FFFFFF;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+
+.btn:focus, .btn:active {
+    box-shadow: none;
+}
+

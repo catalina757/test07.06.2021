@@ -1,0 +1,124 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #333333;
+    background-color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.navbar {
+    height: 80px;
+}
+
+.blue-icon {
+    color: #008EFF;
+    margin: 0 5px 0 5px;
+}
+
+.bi-chevron-down, .bi-chevron-left, .bi-chevron-right {
+    color: #BABABA;
+    margin: 0 5px 0 5px;
+}
+
+.bg-image {
+    background-image: url("images/bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 44%;
+    height: 300px;
+}
+
+.logo-container {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -65px;
+}
+
+.delimiter {
+    border-bottom: 1px solid rgba(51, 51, 51, .20);
+}
+
+.search-menu {
+    border: 1px solid rgba(51, 51, 51, .15);
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.cat-menu {
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    white-space: nowrap;
+}
+
+.cat-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.cat-menu a {
+    font-weight: 700;
+    margin: 10px;
+    padding: 5px;
+    background-color: rgba(186, 186, 186, .1);
+    border-radius: 10px;
+}
+
+a.cat-menu-active, .cat-menu a:hover {
+    background-color: rgb(0, 142, 255, .1);
+    color: #008EFF;
+}
+
+
+.card-image img {
+    width: 78px;
+    height: 78px;
+    border-radius: 10px;
+}
+
+.f-w-700 {
+    font-weight: 700;
+}
+
+.f-w-800 {
+    font-weight: 800;
+}
+
+.f-w-900 {
+    font-weight: 900;
+}
+
+.f-s-price {
+    font-size: 1.22rem;
+}
+
+.f-s-gr {
+    font-size: .9rem;
+    color: #BABABA;
+}
+
+.items-in-cart {
+    font-size: .78rem;
+}
+
+.bgr-dark {
+    background-color: #F7F7F7;
+}
+
+.card {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}

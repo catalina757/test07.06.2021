@@ -19,10 +19,6 @@ p {
     font-size: 1.12rem;
 }
 
-f-s-22 {
-    font-size: 1.37rem;
-}
-
 .fixed-navbar {
     position: fixed;
     top: 0;
@@ -53,7 +49,7 @@ f-s-22 {
     background-image: url("images/bg.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0 30%;
+    background-position: 0 45%;
     height: 300px;
     margin-top: 80px;
 }
@@ -69,6 +65,17 @@ f-s-22 {
     align-items: center;
     justify-content: center;
     margin-top: -65px;
+}
+
+@media (max-width: 770px) {
+    .bg-image {
+        height: 200px;
+    }
+
+    .logo-container {
+        width: 115px;
+        height:115px;
+    }
 }
 
 .delimiter {
@@ -226,5 +233,8 @@ a.cat-menu-active, .cat-menu a:hover {
 
 .card-image:hover img {
     box-shadow: 0 5px 25px rgba(0, 0, 0, .5);
+}
 
+.title-pub {
+    margin: -10px -20px auto auto;
 }

@@ -17,7 +17,7 @@
         let products = [
             {
                 id: 1,
-                text: 'Steak de porc cu sos de mustar si cartofi wedges...',
+                text: 'Steak de porc cu sos de mustar si cartofi...',
                 quantity: 1,
                 price: 120,
                 photo: 'card-image.png',
@@ -25,21 +25,69 @@
             },
             {
                 id: 2,
-                text: 'Steak de porc cu sos de mustar si cartofi wedges...',
+                text: 'Cordon bleu din piept de pui, cartofi prajiti...',
                 quantity: 1,
-                price: 121,
+                price: 25,
                 photo: 'card-image1.png',
-
+            },
+            {
+                id: 3,
+                text: 'Carne de porc gatita lent, cartofi prajiti, sos cedar...',
+                quantity: 1,
+                price: 80,
+                photo: 'card-image2.png',
+            },
+            {
+                id: 4,
+                text: 'Bulete de mozzarella',
+                quantity: 1,
+                price: 15,
+                photo: 'card-image3.png',
+            },
+            {
+                id: 5,
+                text: 'Tacos de porc cu cartofi prajiti si sos spicy...',
+                quantity: 1,
+                price: 35,
+                photo: 'card-image4.png',
+            },
+            {
+                id: 6,
+                text: 'Bruschette cu somon fume',
+                quantity: 1,
+                price: 80,
+                photo: 'card-image5.png',
+            },
+            {
+                id: 7,
+                text: 'Bruschette cu ton',
+                quantity: 1,
+                price: 80,
+                photo: 'card-image6.png',
+            },
+            {
+                id: 8,
+                text: 'Steak de porc cu sos de mustar si cartofi...',
+                quantity: 1,
+                price: 120,
+                photo: 'card-image7.png',
+            },
+            {
+                id: 9,
+                text: 'Cordon bleu din piept de pui, cartofi prajiti...',
+                quantity: 1,
+                price: 25,
+                photo: 'card-image8.png',
             }
         ];
     </script>
 </head>
 <body>
 
-<div class="container-fluid fixed-navbar">
+<div class="container-fluid fixed-navbar d-none d-md-block">
     <nav class="navbar navbar-light">
         <div class="container-fluid">
-            <span class="f-s-18 f-w-800">Orice comanda online va fi confirmata in 5 minute</span>
+            <span class="f-w-800 f-s-18"><span class=" d-none d-lg-block">Orice comanda online va fi confirmata in 5 minute</span></span>
             <div>
                 <a href="javascript://" class="d-inline-block me-4"><i class="bi bi-calendar4-event blue-icon"></i> Livrare astazi <i class="bi bi-chevron-down"></i></a>
                 <a href="javascript://" class="d-inline-block me-4" onclick="toggleCart()"><i class="bi bi-cart blue-icon"></i> Cosul tau <span class="badge rounded-circle bg-primary items-in-cart">3</span></a>
@@ -50,10 +98,27 @@
     </nav>
 </div>
 
+<div class="container-fluid fixed-navbar d-block d-md-none">
+    <nav class="navbar navbar-light">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center justify-content-between w-100">
+                <div class="d-flex align-items-center">
+                    <a href="#"><i class="bi bi-person blue-icon"></i><i class="bi bi-chevron-down"></i></a>
+                </div>
+                <div class="d-flex align-items-center">
+
+                    <a href="javascript://" class="d-inline-block me-4"><i class="bi bi-calendar4-event blue-icon"></i><i class="bi bi-chevron-down"></i></a>
+                    <a href="javascript://" class="d-inline-block me-4" onclick="toggleCart()"><i class="bi bi-cart blue-icon"></i><span class="badge rounded-circle bg-primary items-in-cart">3</span></a>
+                    <a href="javascript://"><i class="bi bi-list me-3 blue-icon"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
 <div class="container-fluid bg-image"></div>
 
-
-<div style="margin: auto; width: 900px">
+<div style="margin: auto;max-width: 900px">
 
     <div class="container">
         <div class="row" style="height: 80px">
@@ -65,20 +130,31 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-6 text-lg-end text-sm-center d-flex align-items-center justify-content-end">
+            <div class="col-lg-6 text-lg-end text-sm-center d-flex align-items-center justify-content-end d-none d-md-block">
                 <a href="javascript://" class="f-w-700 me-3"><i class="bi bi-book blue-icon"></i> Rezerva o masa</a>
                 <a href="javascript://" class="f-w-700 me-3"><i class="bi bi-telephone blue-icon"></i> Suna localul</a>
+                <a href="javascript://" class="f-w-700"><i class="bi bi-info-circle blue-icon"></i> Informatii</a>
+            </div>
+
+            <div class="d-block d-md-none title-pub">
+                <h4 class="f-w-800 text-center title-pub">Pub App Restaurant</h4>
+            </div>
+
+            <div class="col-lg-6 text-lg-end text-sm-center d-flex align-items-center justify-content-around d-block d-md-none pt-3">
+                <a href="javascript://" class="f-w-700 me-3"><i class="bi bi-book blue-icon"></i> Rezerva</a>
+                <a href="javascript://" class="f-w-700 me-3"><i class="bi bi-telephone blue-icon"></i> Suna</a>
                 <a href="javascript://" class="f-w-700"><i class="bi bi-info-circle blue-icon"></i> Informatii</a>
             </div>
         </div>
     </div>
 
 </div>
-<div class="container-fluid delimiter"></div>
+
+<div class="container-fluid delimiter pt-5"></div>
 
 
 <div class="container-fluid horizontal-menu">
-    <div style="margin: auto; width: 900px">
+    <div style="margin: auto;max-width: 900px">
         <div class="container">
             <div class="d-flex align-items-center">
                 <a href="javascript://" class="search-menu me-3">
@@ -117,7 +193,7 @@
 
 </div>
 
-<div style="margin: auto; width: 900px">
+<div style="margin: auto; max-width: 900px">
 
     <div class="container py-3">
         <h4 style="font-size: 1.33rem" class="f-w-800">Meniul zilei</h4>
@@ -146,14 +222,14 @@
             <div class="col-lg-6">
                 <div class="card mb-3">
                     <div class="row g-0">
-                        <div class="col-md-9">
+                        <div class="col-9">
                             <div class="card-body">
                                 <p class="card-text">Cordon bleu din piept de pui, cartofi prajiti
                                     si sos tartar + o bautura gratis</p>
                                 <p class=" f-w-800 f-s-price"> 25 Lei <small class="f-w-700 f-s-gr">(400g)</small></p>
                             </div>
                         </div>
-                        <div class="col-md-3 card-image d-flex align-items-center">
+                        <div class="col-3 card-image d-flex align-items-center">
                             <div style="cursor: pointer" onclick="addToCart(2)">
                                 <a href="javascript://" class="add-to-cart">
                                     <i class="bi bi-plus-circle"></i>
@@ -169,13 +245,13 @@
             <div class="col-lg-6">
                 <div class="card mb-3">
                     <div class="row g-0">
-                        <div class="col-md-9">
+                        <div class="col-9">
                             <div class="card-body">
                                 <p class="card-text">Carne de porc gatita lent, cartofi prajiti, sos cedar, rosii, jalapeno</p>
                                 <p class=" f-w-800 f-s-price"> 80 Lei <small class="f-w-700 f-s-gr">(340g)</small></p>
                             </div>
                         </div>
-                        <div class="col-md-3 card-image d-flex align-items-center">
+                        <div class="col-3 card-image d-flex align-items-center">
                             <div style="cursor: pointer" onclick="addToCart(3)">
                                 <a href="javascript://" class="add-to-cart">
                                     <i class="bi bi-plus-circle"></i>
@@ -192,7 +268,7 @@
 </div>
 
 <div class="container-fluid bgr-dark">
-    <div style="margin: auto; width: 900px">
+    <div style="margin: auto;max-width: 900px">
         <div class="py-3">
             <div class="container">
                 <h4 style="font-size: 1.33rem" class="f-w-800">Aperitive</h4>
@@ -200,13 +276,13 @@
                     <div class="col-lg-6">
                         <div class="card mb-3">
                             <div class="row g-0">
-                                <div class="col-md-9">
+                                <div class="col-9">
                                     <div class="card-body">
                                         <p class="card-text">Bulete de mozzarella</p>
                                         <p class=" f-w-800 f-s-price"> 15 Lei <small class="f-w-700 f-s-gr">(340g)</small></p>
                                     </div>
                                 </div>
-                                <div class="col-md-3 card-image d-flex align-items-center">
+                                <div class="col-3 card-image d-flex align-items-center">
                                     <div style="cursor: pointer" onclick="addToCart(4)">
                                         <a href="javascript://" class="add-to-cart">
                                             <i class="bi bi-plus-circle"></i>
@@ -221,13 +297,13 @@
                     <div class="col-lg-6">
                         <div class="card mb-3">
                             <div class="row g-0">
-                                <div class="col-md-9">
+                                <div class="col-9">
                                     <div class="card-body">
                                         <p class="card-text">Tacos de porc cu cartofi prajiti si sos spicy mayo + o bautura gratis</p>
                                         <p class=" f-w-800 f-s-price"> 35 Lei <small class="f-w-700 f-s-gr">(400g)</small></p>
                                     </div>
                                 </div>
-                                <div class="col-md-3 card-image d-flex align-items-center">
+                                <div class="col-3 card-image d-flex align-items-center">
                                     <div style="cursor: pointer" onclick="addToCart(5)">
                                         <a href="javascript://" class="add-to-cart">
                                             <i class="bi bi-plus-circle"></i>
@@ -243,13 +319,13 @@
                     <div class="col-lg-6">
                         <div class="card mb-3">
                             <div class="row g-0">
-                                <div class="col-md-9">
+                                <div class="col-9">
                                     <div class="card-body">
                                         <p class="card-text">Bruschette cu somon fume</p>
                                         <p class=" f-w-800 f-s-price"> 80 Lei <small class="f-w-700 f-s-gr">(340g)</small></p>
                                     </div>
                                 </div>
-                                <div class="col-md-3 card-image d-flex align-items-center">
+                                <div class="col-3 card-image d-flex align-items-center">
                                     <div style="cursor: pointer" onclick="addToCart(6)">
                                         <a href="javascript://" class="add-to-cart">
                                             <i class="bi bi-plus-circle"></i>
@@ -263,13 +339,13 @@
                     <div class="col-lg-6">
                         <div class="card mb-3">
                             <div class="row g-0">
-                                <div class="col-md-9">
+                                <div class="col-9">
                                     <div class="card-body">
                                         <p class="card-text">Bruschette cu ton</p>
                                         <p class=" f-w-800 f-s-price"> 80 Lei <small class="f-w-700 f-s-gr">(340g)</small></p>
                                     </div>
                                 </div>
-                                <div class="col-md-3 card-image d-flex align-items-center">
+                                <div class="col-3 card-image d-flex align-items-center">
                                     <div style="cursor: pointer" onclick="addToCart(7)">
                                         <a href="javascript://" class="add-to-cart">
                                             <i class="bi bi-plus-circle"></i>
@@ -286,20 +362,20 @@
     </div>
 </div>
 
-<div style="margin: auto; width: 900px">
+<div style="margin: auto;max-width: 900px">
     <div class="container py-3">
         <h4 style="font-size: 1.33rem" class="f-w-800">Grill & Snitel</h4>
         <div class="row">
             <div class="col-lg-6">
                 <div class="card mb-3">
                     <div class="row g-0">
-                        <div class="col-md-9">
+                        <div class="col-9">
                             <div class="card-body">
                                 <p class="card-text">Steak de porc cu sos de mustar si cartofi wedges rumeniti la cuptor</p>
                                 <p class=" f-w-800 f-s-price"> 120 Lei <small class="f-w-700 f-s-gr">(340g)</small></p>
                             </div>
                         </div>
-                        <div class="col-md-3 card-image d-flex align-items-center">
+                        <div class="col-3 card-image d-flex align-items-center">
                             <div style="cursor: pointer" onclick="addToCart(8)">
                                 <a href="javascript://" class="add-to-cart">
                                     <i class="bi bi-plus-circle"></i>
@@ -314,13 +390,13 @@
             <div class="col-lg-6">
                 <div class="card mb-3">
                     <div class="row g-0">
-                        <div class="col-md-9">
+                        <div class="col-9">
                             <div class="card-body">
                                 <p class="card-text">Cordon bleu din piept de pui, cartofi prajiti si sos tartar + o bautura gratis</p>
                                 <p class=" f-w-800 f-s-price"> 25 Lei <small class="f-w-700 f-s-gr">(400g)</small></p>
                             </div>
                         </div>
-                        <div class="col-md-3 card-image d-flex align-items-center">
+                        <div class="col-3 card-image d-flex align-items-center">
                             <div style="cursor: pointer" onclick="addToCart(9)">
                                 <a href="javascript://"  class="add-to-cart">
                                     <i class="bi bi-plus-circle"></i>

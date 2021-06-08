@@ -160,9 +160,14 @@ a.cat-menu-active, .cat-menu a:hover {
     overflow: auto;
     padding-bottom: 100px;
     right: 0;
-    margin-left: -400px;
+    margin-right: -370px;
     background: rgba(255, 255, 255);
     box-shadow: -10px 0px 25px rgba(0, 0, 0, 0.05);
+    transition: all 1s ease;
+}
+
+.cart-show {
+    margin-right: 0;
 }
 
 .minus-button, .plus-button {
@@ -205,3 +210,21 @@ a.cat-menu-active, .cat-menu a:hover {
     box-shadow: none;
 }
 
+.add-to-cart {
+    text-align: center;
+    position: absolute;
+    top: 21px;
+    margin-left: 58px;
+    background-color: #008EFF;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 10px;
+    padding: 5px;
+}
+
+.card-image:hover img {
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .5);
+
+}

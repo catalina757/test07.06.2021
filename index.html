@@ -11,15 +11,27 @@
     <link rel="stylesheet" href="styles.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <title>Document</title>
+    <script>
+        let cart = [];
 
-    <script type="text/javascript">
-        function scrollMenuRight() {
-            document.getElementById('horizontal-menu').scrollBy({left: 80, top: 0, behavior: 'smooth'});
-        }
+        let products = [
+            {
+                id: 1,
+                text: 'Steak de porc cu sos de mustar si cartofi wedges...',
+                quantity: 1,
+                price: 120,
+                photo: 'card-image.png',
 
-        function scrollMenuLeft() {
-            document.getElementById('horizontal-menu').scrollBy({left: -80, top: 0, behavior: 'smooth'});
-        }
+            },
+            {
+                id: 2,
+                text: 'Steak de porc cu sos de mustar si cartofi wedges...',
+                quantity: 1,
+                price: 121,
+                photo: 'card-image1.png',
+
+            }
+        ];
     </script>
 </head>
 <body>
@@ -29,10 +41,10 @@
         <div class="container-fluid">
             <span class="f-s-18 f-w-800">Orice comanda online va fi confirmata in 5 minute</span>
             <div>
-                <a href="#" class="d-inline-block me-4"><i class="bi bi-calendar4-event blue-icon"></i> Livrare astazi <i class="bi bi-chevron-down"></i></a>
-                <a href="#" class="d-inline-block me-4"><i class="bi bi-cart blue-icon"></i> Cosul tau <span class="badge rounded-circle bg-primary items-in-cart">3</span></a>
-                <a href="#" class="d-inline-block me-4">Andrei Alexandru <i class="bi bi-chevron-down"></i></a>
-                <a href="#"><i class="bi bi-list me-3 blue-icon"></i></a>
+                <a href="javascript://" class="d-inline-block me-4"><i class="bi bi-calendar4-event blue-icon"></i> Livrare astazi <i class="bi bi-chevron-down"></i></a>
+                <a href="javascript://" class="d-inline-block me-4" onclick="toggleCart()"><i class="bi bi-cart blue-icon"></i> Cosul tau <span class="badge rounded-circle bg-primary items-in-cart">3</span></a>
+                <a href="javascript://" class="d-inline-block me-4">Andrei Alexandru <i class="bi bi-chevron-down"></i></a>
+                <a href="javascript://"><i class="bi bi-list me-3 blue-icon"></i></a>
             </div>
         </div>
     </nav>
@@ -54,9 +66,9 @@
                 </a>
             </div>
             <div class="col-lg-6 text-lg-end text-sm-center d-flex align-items-center justify-content-end">
-                <a href="#" class="f-w-700 me-3"><i class="bi bi-book blue-icon"></i> Rezerva o masa</a>
-                <a href="#" class="f-w-700 me-3"><i class="bi bi-telephone blue-icon"></i> Suna localul</a>
-                <a href="#" class="f-w-700"><i class="bi bi-info-circle blue-icon"></i> Informatii</a>
+                <a href="javascript://" class="f-w-700 me-3"><i class="bi bi-book blue-icon"></i> Rezerva o masa</a>
+                <a href="javascript://" class="f-w-700 me-3"><i class="bi bi-telephone blue-icon"></i> Suna localul</a>
+                <a href="javascript://" class="f-w-700"><i class="bi bi-info-circle blue-icon"></i> Informatii</a>
             </div>
         </div>
     </div>
@@ -69,33 +81,33 @@
     <div style="margin: auto; width: 900px">
         <div class="container">
             <div class="d-flex align-items-center">
-                <a href="#" class="search-menu me-3">
+                <a href="javascript://" class="search-menu me-3">
                     <i class="bi bi-search blue-icon"></i>
                 </a>
 
-                <a href="#" class="arrow-left">
+                <a href="javascript://" class="arrow-left">
                     <i class="bi bi-chevron-left" onclick="scrollMenuLeft()"></i>
                 </a>
 
                 <div class="container-fluid flex-grow-1 overflow-hidden p-0">
                     <div class="d-flex flex-row flex-nowrap cat-menu" id="horizontal-menu">
-                        <a href="#" class="cat-menu-active">Toate</a>
-                        <a href="#">Meniul zilei</a>
-                        <a href="#">Aperitive</a>
-                        <a href="#">Grill & Snitel</a>
-                        <a href="#">Burgers</a>
-                        <a href="#">Pizza</a>
-                        <a href="#">Supe</a>
-                        <a href="#">Paste</a>
-                        <a href="#">Sucuri</a>
-                        <a href="#">Bere</a>
-                        <a href="#">Tarie</a>
-                        <a href="#">Prajituri</a>
-                        <a href="#">Tocanite</a>
+                        <a href="javascript://" class="cat-menu-active">Toate</a>
+                        <a href="javascript://">Meniul zilei</a>
+                        <a href="javascript://">Aperitive</a>
+                        <a href="javascript://">Grill & Snitel</a>
+                        <a href="javascript://">Burgers</a>
+                        <a href="javascript://">Pizza</a>
+                        <a href="javascript://">Supe</a>
+                        <a href="javascript://">Paste</a>
+                        <a href="javascript://">Sucuri</a>
+                        <a href="javascript://">Bere</a>
+                        <a href="javascript://">Tarie</a>
+                        <a href="javascript://">Prajituri</a>
+                        <a href="javascript://">Tocanite</a>
                     </div>
                 </div>
 
-                <a href="#" class="arrow-right ms-2">
+                <a href="javascript://" class="arrow-right ms-2">
                     <i class="bi bi-chevron-right" onclick="scrollMenuRight()"></i>
                 </a>
 
@@ -113,14 +125,19 @@
             <div class="col-lg-6">
                 <div class="card mb-3">
                     <div class="row g-0">
-                        <div class="col-md-9">
+                        <div class="col-9">
                             <div class="card-body">
                                 <p class="card-text">Steak de porc cu sos de mustar si cartofi wedges rumeniti la cuptor</p>
                                 <p class=" f-w-800 f-s-price"> 120 Lei <small class="f-w-700 f-s-gr">(340g)</small></p>
                             </div>
                         </div>
-                        <div class="col-md-3 card-image d-flex align-items-center">
-                            <img src="images/card-image.png" alt="Card image">
+                        <div class="col-3 card-image d-flex align-items-center">
+                            <div style="cursor: pointer" onclick="addToCart(1)">
+                                <a href="javascript://" class="add-to-cart">
+                                    <i class="bi bi-plus-circle"></i>
+                                </a>
+                                <img src="images/card-image.png" alt="Card image">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -137,7 +154,12 @@
                             </div>
                         </div>
                         <div class="col-md-3 card-image d-flex align-items-center">
-                            <img src="images/card-image1.png" alt="Card image">
+                            <div style="cursor: pointer" onclick="addToCart(2)">
+                                <a href="javascript://" class="add-to-cart">
+                                    <i class="bi bi-plus-circle"></i>
+                                </a>
+                                <img src="images/card-image1.png" alt="Card image">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -154,7 +176,12 @@
                             </div>
                         </div>
                         <div class="col-md-3 card-image d-flex align-items-center">
-                            <img src="images/card-image2.png" alt="Card image">
+                            <div style="cursor: pointer" onclick="addToCart(3)">
+                                <a href="javascript://" class="add-to-cart">
+                                    <i class="bi bi-plus-circle"></i>
+                                </a>
+                                <img src="images/card-image2.png" alt="Card image">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -180,7 +207,12 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3 card-image d-flex align-items-center">
-                                    <img src="images/card-image3.png" alt="Card image">
+                                    <div style="cursor: pointer" onclick="addToCart(4)">
+                                        <a href="javascript://" class="add-to-cart">
+                                            <i class="bi bi-plus-circle"></i>
+                                        </a>
+                                        <img src="images/card-image3.png" alt="Card image">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -196,7 +228,12 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3 card-image d-flex align-items-center">
-                                    <img src="images/card-image4.png" alt="Card image">
+                                    <div style="cursor: pointer" onclick="addToCart(5)">
+                                        <a href="javascript://" class="add-to-cart">
+                                            <i class="bi bi-plus-circle"></i>
+                                        </a>
+                                        <img src="images/card-image4.png" alt="Card image">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -213,7 +250,12 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3 card-image d-flex align-items-center">
-                                    <img src="images/card-image5.png" alt="Card image">
+                                    <div style="cursor: pointer" onclick="addToCart(6)">
+                                        <a href="javascript://" class="add-to-cart">
+                                            <i class="bi bi-plus-circle"></i>
+                                        </a>
+                                        <img src="images/card-image5.png" alt="Card image">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -228,7 +270,12 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3 card-image d-flex align-items-center">
-                                    <img src="images/card-image6.png" alt="Card image">
+                                    <div style="cursor: pointer" onclick="addToCart(7)">
+                                        <a href="javascript://" class="add-to-cart">
+                                            <i class="bi bi-plus-circle"></i>
+                                        </a>
+                                        <img src="images/card-image6.png" alt="Card image">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -253,7 +300,12 @@
                             </div>
                         </div>
                         <div class="col-md-3 card-image d-flex align-items-center">
-                            <img src="images/card-image7.png" alt="Card image">
+                            <div style="cursor: pointer" onclick="addToCart(8)">
+                                <a href="javascript://" class="add-to-cart">
+                                    <i class="bi bi-plus-circle"></i>
+                                </a>
+                                <img src="images/card-image7.png" alt="Card image">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -269,7 +321,12 @@
                             </div>
                         </div>
                         <div class="col-md-3 card-image d-flex align-items-center">
-                            <img src="images/card-image8.png" alt="Card image">
+                            <div style="cursor: pointer" onclick="addToCart(9)">
+                                <a href="javascript://"  class="add-to-cart">
+                                    <i class="bi bi-plus-circle"></i>
+                                </a>
+                                <img src="images/card-image8.png" alt="Card image">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -278,68 +335,13 @@
     </div>
 </div>
 
-<div class="cart">
-
+<div class="cart cart-show d-none d-lg-block" id="my-cart">
     <p class="f-w-800 f-s-18 m-4">Cosul tau de cumparaturi</p>
-    <div class="card m-4 p-3">
-        <div class="d-flex">
-            <div class="card-image d-flex align-items-center">
-                <img src="images/card-image.png" alt="Card image">
-            </div>
-            <div class="ps-3">
-                <p class="card-text">Steak de porc cu sos de mustar</p>
-                <div class="d-flex justify-content-between">
-                    <div>
-                        <button type="button" class="minus-button"> - </button>
-                        <span class="f-w-800 mx-2"> 1 </span>
-                        <button type="button" class="plus-button"> + </button>
-                    </div>
-                    <div class="f-w-800 f-s-price"> 120 lei</div>
-                </div>
-            </div>
-            <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close" style="float: right"></button>
-        </div>
-    </div>
 
-    <div class="card m-4 p-3">
-        <div class="d-flex">
-            <div class="card-image d-flex align-items-center">
-                <img src="images/card-image.png" alt="Card image">
-            </div>
-            <div class="ps-3">
-                <p class="card-text">Steak de porc cu sos de mustar</p>
-                <div class="d-flex justify-content-between">
-                    <div>
-                        <button type="button" class="minus-button"> - </button>
-                        <span class="f-w-800 mx-2"> 1 </span>
-                        <button type="button" class="plus-button"> + </button>
-                    </div>
-                    <div class="f-w-800 f-s-price"> 120 lei</div>
-                </div>
-            </div>
-            <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close" style="float: right"></button>
-        </div>
-    </div>
+    <div id="cart-content"></div>
 
-    <div class="card m-4 p-3">
-        <div class="d-flex">
-            <div class="card-image d-flex align-items-center">
-                <img src="images/card-image.png" alt="Card image">
-            </div>
-            <div class="ps-3">
-                <p class="card-text">Steak de porc cu sos de musta</p>
-                <div class="d-flex justify-content-between">
-                    <div>
-                        <button type="button" class="minus-button"> - </button>
-                        <span class="f-w-800 mx-2"> 1 </span>
-                        <button type="button" class="plus-button"> + </button>
-                    </div>
-                    <div class="f-w-800 f-s-price"> 120 lei</div>
-                </div>
-            </div>
-            <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close" style="float: right"></button>
-        </div>
-    </div>
+
+
 
     <div class="delimiter mx-4"></div>
 
@@ -359,12 +361,14 @@
     </div>
 
     <div class="d-grid col-11 mx-auto">
-        <button class="btn checkout-button" type="button">Checkout</button>
+        <button class="btn checkout-button" type="button" onclick="renderCart()">Checkout</button>
     </div>
 
 </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="script.js" type="text/javascript"></script>
+
 </body>
 </html>
